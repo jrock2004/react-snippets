@@ -4,6 +4,15 @@ Another vim plugin for react. I used [vim-react-snippets](https://github.com/epi
 as a base along with one from vscode [vscode-es7-javascript-react-snippets
 ](https://github.com/dsznajder/vscode-es7-javascript-react-snippets)
 
+## Installation
+
+Using vim-plug you can add the following:
+
+```
+Plug 'SirVer/ultisnips'
+Plug 'jrock2004/react-snippets'
+```
+
 ## Basic Methods
 
 |  Prefix | Method                                              |
