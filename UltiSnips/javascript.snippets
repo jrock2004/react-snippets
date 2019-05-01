@@ -32,43 +32,73 @@ export { ${2:originalName} as ${3:alias} } from '${1:module}'$0
 endsnippet
 
 snippet enf "Export named function in ES7 syntax"
-export const ${1:functionName} = (${2:params}) => {,  $0,},
+export const ${1:functionName} = (${2:params}) => {
+	$0
+}
+
 endsnippet
 
 snippet edf "Export default function in ES7 syntax"
-export default (${1:params}) => {,  $0,},
+export default (${1:params}) => {
+	$0
+}
+
 endsnippet
 
 snippet met "Creates a method inside a class in ES7 syntax"
-${1:methodName} = (${2:params}) => {,  ${0},},
+${1:methodName} = (${2:params}) => {
+	${0}
+}
+
 endsnippet
 
 snippet pge "Creates a getter property inside a class in ES7 syntax"
-get ${1:propertyName}() {,  return this.${0},},
+get ${1:propertyName}() {
+	return this.${0}
+}
+
 endsnippet
 
 snippet pse "Creates a setter property inside a class in ES7 syntax"
-set ${1:propertyName}(${2:value}) {,  ${0},},
+set ${1:propertyName}(${2:value}) {
+	${0}
+}
+
 endsnippet
 
 snippet fre "Creates a forEach statement in ES7 syntax"
-${1:array}.forEach(${2:currentItem} => {,  ${0},}),
+${1:array}.forEach(${2:currentItem} => {
+	${0}
+})
+
 endsnippet
 
 snippet fof "Iterating over property names of iterable objects"
-for(let ${1:item} of ${2:object}) {,  ${0},},
+for(let ${1:item} of ${2:object}) {
+	${0}
+}
+
 endsnippet
 
 snippet fin "Iterating over property values of iterable objects"
-for(let ${1:item} in ${2:object}) {,  ${0},},
+for(let ${1:item} in ${2:object}) {
+	${0}
+}
+
 endsnippet
 
 snippet anfn "Creates an anonymous function in ES7 syntax"
-(${1:params}) => {,  ${2},},
+(${1:params}) => {
+	${2}
+}
+
 endsnippet
 
 snippet nfn "Creates a named function in ES7 syntax"
-const ${1:name} = (${2:params}) => {,  ${3},},
+const ${1:name} = (${2:params}) => {
+	${3}
+}
+
 endsnippet
 
 snippet dob "Creates and assigns a local variable using object destructing"
@@ -80,15 +110,24 @@ const [${1:propertyName}] = ${2:arrayToDestruct}
 endsnippet
 
 snippet sti "Executes the given function at specified intervals in ES7 syntax"
-setInterval(() => {,  ${2},}, ${0:intervalInms}),
+setInterval(() => {
+	${2}
+}, ${0:intervalInms})
+
 endsnippet
 
 snippet sto "Executes the given function after the specified delay in ES7 syntax"
-setTimeout(() => {,  ${2},}, ${1:delayInms}),
+setTimeout(() => {
+	${2}
+}, ${1:delayInms})
+
 endsnippet
 
 snippet prom "Creates and returns a new Promise in the standard ES7 syntax"
-return new Promise((resolve, reject) => {,  ${1},}),
+return new Promise((resolve, reject) => {
+	${1}
+})
+
 endsnippet
 
 snippet cas "If the specified expression is false, the message is written to the console along with a stack trace"
@@ -156,99 +195,280 @@ const { $1 } = this.state
 endsnippet
 
 snippet imr
-import React from 'react',
+import React from 'react'
+
 endsnippet
 
 snippet imrd
-import ReactDOM from 'react-dom',
+import ReactDOM from 'react-dom'
+
 endsnippet
 
 snippet imrc
-import React, { Component } from 'react',
+import React, { Component } from 'react'
+
 endsnippet
 
 snippet imrcp
-import React, { Component } from 'react',import PropTypes from 'prop-types',
+import React, { Component } from 'react',import PropTypes from 'prop-types'
+
 endsnippet
 
 snippet imrpc
-import React, { PureComponent } from 'react',
+import React, { PureComponent } from 'react'
+
 endsnippet
 
 snippet imrpcp
-import React, { PureComponent } from 'react',import PropTypes from 'prop-types',
+import React, { PureComponent } from 'react',import PropTypes from 'prop-types'
+
 endsnippet
 
 snippet imrm
-import React, { memo } from 'react',
+import React, { memo } from 'react'
+
 endsnippet
 
 snippet imrmp
-import React, { memo } from 'react',import PropTypes from 'prop-types',
+import React, { memo } from 'react',import PropTypes from 'prop-types'
+
 endsnippet
 
 snippet impt
-import PropTypes from 'prop-types',
+import PropTypes from 'prop-types'
+
 endsnippet
 
 snippet imrr
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom',
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+
 endsnippet
 
 snippet redux
-import { connect } from 'react-redux',
+import { connect } from 'react-redux'
+
 endsnippet
 
 snippet rcc "Creates a React component class with ES7 module system"
-import React, { Component } from 'react',,export default class ${1:${TM_FILENAME_BASE}} extends Component {,  render() {,    return (,      <div>,        $0,      </div>,    ),  },},
+import React, { Component } from 'react'
+
+export default class ${1:${TM_FILENAME_BASE}} extends Component {
+  render() {
+    return (
+      <div>
+        $0
+      </div>
+    )
+  }
+}
+
 endsnippet
 
 snippet rce "Creates a React component class with ES7 module system"
-import React, { Component } from 'react',,export class ${1:${TM_FILENAME_BASE}} extends Component {,  render() {,    return (,      <div>,        $0,      </div>,    ),  },},,export default ${1:${TM_FILENAME_BASE}},
+import React, { Component } from 'react'
+
+export class ${1:${TM_FILENAME_BASE}} extends Component {
+  render() {
+    return (
+      <div>
+        $0
+      </div>
+    )
+  }
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
 endsnippet
 
 snippet rfce "Creates a React Functional Component with ES7 module system"
-import React from 'react',,function ${1:${TM_FILENAME_BASE}}() {,  return (,    <div>,      $0,    </div>,  ),},,export default ${1:${TM_FILENAME_BASE}},
+import React from 'react'
+
+function ${1:${TM_FILENAME_BASE}}() {
+  return (
+    <div>
+      $0
+    </div>
+  )
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
 endsnippet
 
 snippet rfc "Creates a React Functional Component with ES7 module system"
-import React from 'react',,export default function ${1:${TM_FILENAME_BASE}}() {,  return (,    <div>,      $0,    </div>,  ),},
+import React from 'react'
+
+export default function ${1:${TM_FILENAME_BASE}}() {
+  return (
+    <div>
+      $0
+    </div>
+  )
+}
+
 endsnippet
 
 snippet rfcp "Creates a React Functional Component with ES7 module system with PropTypes"
-import React from 'react',import PropTypes from 'prop-types',,function ${1:${TM_FILENAME_BASE}}(props) {,  return (,    <div>,      $0,    </div>,  ),},,${1:${TM_FILENAME_BASE}}.propTypes = {,,},,export default ${1:${TM_FILENAME_BASE}},,
+import React from 'react'
+import PropTypes from 'prop-types'
+
+function ${1:${TM_FILENAME_BASE}}(props) {
+  return (
+    <div>
+      $0
+    </div>
+  )
+}
+
+${1:${TM_FILENAME_BASE}}.propTypes = {
+
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
 endsnippet
 
 snippet rafc,rafce "Creates a React Arrow Function Component with ES7 module system"
-import React from 'react',,const ${1:${TM_FILENAME_BASE}} = () => {,  return (,    <div>,      $0,    </div>,  ),},,export default ${1:${TM_FILENAME_BASE}},
+import React from 'react'
+
+const ${1:${TM_FILENAME_BASE}} = () => {
+  return (
+    <div>
+      $0
+    </div>
+  )
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
 endsnippet
 
 snippet rafcp "Creates a React Arrow Function Component with ES7 module system with PropTypes"
-import React from 'react',import PropTypes from 'prop-types',,const ${1:${TM_FILENAME_BASE}} = props => {,  return (,    <div>,      $0,    </div>,  ),},,${1:${TM_FILENAME_BASE}}.propTypes = {,,},,export default ${1:${TM_FILENAME_BASE}},
+import React from 'react'
+import PropTypes from 'prop-types'
+
+const ${1:${TM_FILENAME_BASE}} = props => {
+  return (
+    <div>
+      $0
+    </div>
+  )
+}
+
+${1:${TM_FILENAME_BASE}}.propTypes = {
+
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
 endsnippet
 
 snippet rcep "Creates a React component class with ES7 module system"
-import React, { Component } from 'react',import PropTypes from 'prop-types',,export class ${1:${TM_FILENAME_BASE}} extends Component {,  static propTypes = {,,  },,  render() {,    return (,      <div>,        $0,      </div>,    ),  },},,export default ${1:${TM_FILENAME_BASE}},
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+
+export class ${1:${TM_FILENAME_BASE}} extends Component {
+  static propTypes = {
+
+  }
+
+  render() {
+    return (
+      <div>
+        $0
+      </div>
+    )
+  }
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
 endsnippet
 
 snippet rpc "Creates a React pure component class with ES7 module system"
-import React, { PureComponent } from 'react',,export default class ${1:${TM_FILENAME_BASE}} extends PureComponent {,  render() {,    return (,      <div>,        $0,      </div>,    ),  },},
+import React, { PureComponent } from 'react'
+
+export default class ${1:${TM_FILENAME_BASE}} extends PureComponent {
+  render() {
+    return (
+      <div>
+        $0
+      </div>
+    )
+  }
+}
+
 endsnippet
 
 snippet rpce "Creates a React pure component class with ES7 module system export"
-import React, { PureComponent } from 'react',,export class ${1:${TM_FILENAME_BASE}} extends PureComponent {,  render() {,    return (,      <div>,        $0,      </div>,    ),  },},,export default ${1:$TM_FILENAME_BASE},
+import React, { PureComponent } from 'react'
+
+export class ${1:${TM_FILENAME_BASE}} extends PureComponent {
+  render() {
+    return (
+      <div>
+        $0
+      </div>
+    )
+  }
+}
+
+export default ${1:$TM_FILENAME_BASE}
+
 endsnippet
 
 snippet rpcp "Creates a React component class with ES7 module system"
-import React, { PureComponent } from 'react',import PropTypes from 'prop-types',,export default class ${1:${TM_FILENAME_BASE}} extends PureComponent {,  static propTypes = {,,  },,  render() {,    return (,      <div>,        $0,      </div>,    ),  },},
+import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
+
+export default class ${1:${TM_FILENAME_BASE}} extends PureComponent {
+  static propTypes = {
+
+  }
+
+  render() {
+    return (
+      <div>
+        $0
+      </div>
+    )
+  }
+}
+
 endsnippet
 
 snippet rmc "Creates a React Memo Function Component with ES7 module system"
-import React, { memo } from 'react',,export default memo(function ${1:${TM_FILENAME_BASE}}() {,  return (,    <div>,      $0,    </div>,  ),}),
+import React, { memo } from 'react'
+
+export default memo(function ${1:${TM_FILENAME_BASE}}() {
+  return (
+    <div>
+      $0
+    </div>
+  )
+})
+
 endsnippet
 
 snippet rmcp "Creates a React Memo Function Component with ES7 module system with PropTypes"
-import React, { memo } from 'react',import PropTypes from 'prop-types',,const ${1:${TM_FILENAME_BASE}} = memo(function ${1:${TM_FILENAME_BASE}}(props) {,  return (,    <div>,      $0,    </div>,  ),}),,${1:${TM_FILENAME_BASE}}.propTypes = {,,},,export default ${1:${TM_FILENAME_BASE}},
+import React, { memo } from 'react'
+import PropTypes from 'prop-types'
+
+const ${1:${TM_FILENAME_BASE}} = memo(function ${1:${TM_FILENAME_BASE}}(props) {
+  return (
+    <div>
+      $0
+    </div>
+  )
+})
+
+${1:${TM_FILENAME_BASE}}.propTypes = {
+
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
 endsnippet
 
 snippet rccp "Creates a React component class with PropTypes and ES7 module system"
